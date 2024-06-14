@@ -24,8 +24,8 @@ button:hover{
     align-items: center;
     justify-content: center;
     text-align: center;
-    
 }
+
 .card-footer{
     align-items: center;
     justify-content: center;
@@ -35,7 +35,9 @@ button:hover{
 }
 
 #CitySelectTabContent {
-    border: 2px black solid;
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border: .25em black solid;
     padding: 1em;
 }
 
@@ -51,30 +53,25 @@ button:hover{
     background-size: cover;
 }
 
-.col-2 {
-    border: 2px solid black;
-}
+
 
 .content-item-bot{
     padding: .5em;
-    border-top-right-radius: 1em;
-    border-bottom-right-radius: .5em;
-    border-right: .5em black solid;
-    border-bottom: .5em black solid;
-    border-top: .5em black solid;
+    border-radius: 1em;
+    border: .25em black solid;
     margin-bottom: .5em;
-    
-    background: linear-gradient(90deg, rgba(128,128,128,1) 0%, rgba(199,199,199,1) 50%, rgba(128,128,128,1) 100%); 
+    background: #f8f8f8; 
 
 }
 
 .content-item-bot > p {
-    text-align: start;
+    text-align: left;
 }
 
 hr {
     border-top: .25em dotted black;
 }
+
 
 .strategy-title {
     text-decoration: double underline overline black;
@@ -92,6 +89,19 @@ img {
 }
 
 .nav-item .active{
-    border-top: 2px black dashed !important;
+    background: rgba(200, 200, 200, 0.8) !important;
 }
 
+.nav {
+    border-left: .25em black solid;
+    border-top: .25em black solid;;
+}
+
+/* 
+    Mobile mode
+*/
+@media (max-width: 600px){
+    #matrixContainer {
+        display: none;
+    }
+}
