@@ -1,0 +1,133 @@
+.body {
+    font-family: sans-serif;
+}
+
+.card {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.8);
+    transition: 0.3s;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+button:hover {
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+}
+
+.card-title {
+    font-size: x-large;
+    text-align: center;
+}
+
+.card-body {
+    font-size: small;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+.card-footer {
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    display: flex;
+
+}
+
+#CitySelectTabContent {
+    border-bottom-left-radius: 1em;
+    border-bottom-right-radius: 1em;
+    border: .25em black solid;
+    padding: 1em;
+}
+
+.card-group {
+    gap: 1em;
+    padding: .5em;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.col-10 {
+    background-image: url("./images/bgSchematic.png");
+    background-size: cover;
+}
+
+
+
+.content-item-bot {
+    padding: .5em;
+    border-radius: 1em;
+    border: .25em black solid;
+    margin-bottom: .5em;
+    background: #f8f8f8;
+
+}
+
+.content-item-bot>p {
+    text-align: left;
+}
+
+hr {
+    border-top: .25em dotted black;
+}
+
+.strategy-title {
+
+    font-size: 2em;
+}
+
+img {
+    height: 3em;
+    padding-right: .5em;
+}
+
+.sideways {
+    writing-mode: vertical-rl;
+    text-orientation: upright;
+}
+
+.nav-item .active {
+    background: rgba(200, 200, 200, 0.8) !important;
+}
+
+.nav {
+    border-left: .25em black solid;
+    border-top: .25em black solid;
+}
+
+.note {
+    font-size: .8em;
+}
+
+/* 
+    Mobile mode - lol
+    @media (max-width: 600px) {
+    #matrixContainer {
+        display: none;
+    }
+}
+*/
+
+/*
+card format:
+<div class="card">
+    <div class="card-body">
+        <h5 class="card-title">TODO</h5>
+        <p class="card-body">TODO</p>
+    </div>
+    <div class="card-footer">
+        <button class="nav-link" id="city4Policy3Strategy5"
+        data-bs-toggle="tab" data-bs-target="#city4-policy3-strategy5-pane">More Info</button>
+    </div>
+</div>
+tab-pane format:
+<div class="tab-pane fade" id="cityX-policyX-strategyX-pane"
+role="tabpanel" aria-labelledby="cityXPolicyXStrategyX">
+    <div class="content-item-bot">
+        <h5 class="strategy-title">TODO</h5>
+        <p>TODO</p>
+    </div>
+</div>
+*/
