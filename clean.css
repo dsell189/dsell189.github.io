@@ -32,7 +32,7 @@ button:hover {
     justify-content: center;
     text-align: center;
     display: flex;
-
+    
 }
 
 #CitySelectTabContent {
@@ -43,17 +43,16 @@ button:hover {
 }
 
 .card-group {
-    gap: 1em;
-    padding: .5em;
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-gap: 1rem;
+    margin: .5em;
+    grid-template-columns: repeat( 2, minmax(250px, 2fr) );
 }
 
 .col-10 {
     background-image: url("./images/bgSchematic.png");
     background-size: cover;
 }
-
 
 
 .content-item-bot {
@@ -74,18 +73,12 @@ hr {
 }
 
 .strategy-title {
-
     font-size: 2em;
 }
 
 img {
     height: 3em;
-    padding-right: .5em;
-}
-
-.sideways {
-    writing-mode: vertical-rl;
-    text-orientation: upright;
+    padding-right: .25em;
 }
 
 .nav-item .active {
@@ -95,20 +88,34 @@ img {
 .nav {
     border-left: .25em black solid;
     border-top: .25em black solid;
+    
 }
+
 
 .note {
     font-size: .8em;
 }
 
-/* 
-    Mobile mode - lol
-    @media (max-width: 600px) {
-    #matrixContainer {
-        display: none;
+/* small screens */
+@media (max-width: 768px) {
+    .card-group {
+        grid-template-columns: repeat( auto-fit, minmax(250px, 1fr) );
     }
+
+    .nav-pills>.nav-item {
+        white-space: nowrap;
+        overflow: hidden;
+    }
+    
+    ul{
+        grid-template-columns: repeat(2, 1fr);
+    }
+   
+    
 }
-*/
+
+
+
 
 /*
 card format:
@@ -118,13 +125,13 @@ card format:
         <p class="card-body">TODO</p>
     </div>
     <div class="card-footer">
-        <button class="nav-link" id="city4Policy3Strategy5"
-        data-bs-toggle="tab" data-bs-target="#city4-policy3-strategy5-pane">More Info</button>
+        <button class="nav-link" id="city{X}Policy{X}Strategy{X}"
+        data-bs-toggle="tab" data-bs-target="#city{X}-policy{X}-strategy{X}-pane">More Info</button>
     </div>
 </div>
 tab-pane format:
-<div class="tab-pane fade" id="cityX-policyX-strategyX-pane"
-role="tabpanel" aria-labelledby="cityXPolicyXStrategyX">
+<div class="tab-pane fade" id="cityX-policy{X}-strategy{X}-pane"
+role="tabpanel" aria-labelledby="cityXPolicy{XStrategy{X}">
     <div class="content-item-bot">
         <h5 class="strategy-title">TODO</h5>
         <p>TODO</p>
